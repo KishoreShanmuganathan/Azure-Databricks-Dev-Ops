@@ -19,7 +19,7 @@ initScriptsPath="dbfs:/init-scripts"
 ######################################################################################
 
 accessToken=$(curl -X POST https://login.microsoftonline.com/$tenant_id/oauth2/token \
-  -F resource=$azure_databricks_resource_id \
+  -F resource=$subscription_id \
   -F client_id=$client_id \
   -F grant_type=client_credentials \
   -F client_secret=$client_secret | jq .access_token --raw-output) 
