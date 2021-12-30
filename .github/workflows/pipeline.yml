@@ -152,9 +152,9 @@ jobs:
     needs: Build
     runs-on: ubuntu-latest
     env:
-      resourceGroupName: '${{ github.event.inputs.RESOURCE_GROUP }}-Dev'
-      databricksWorkspaceName: '${{ github.event.inputs.WORKSPACE_NAME }}-Dev'
-      keyVaultName: '${{ github.event.inputs.KEY_VAULT_NAME }}-Dev'
+      resourceGroupName: '${{ github.event.inputs.RESOURCE_GROUP }}-DEV'
+      databricksWorkspaceName: '${{ github.event.inputs.WORKSPACE_NAME }}-DEV'
+      keyVaultName: '${{ github.event.inputs.KEY_VAULT_NAME }}-DEV'
 
     steps:
     # Show the environment variables for debugging
@@ -412,9 +412,9 @@ jobs:
     needs: QA
     runs-on: ubuntu-latest
     env:
-      resourceGroupName: '${{ github.event.inputs.RESOURCE_GROUP }}-Prod'
-      databricksWorkspaceName: '${{ github.event.inputs.WORKSPACE_NAME }}-Prod'
-      keyVaultName: '${{ github.event.inputs.KEY_VAULT_NAME }}-Prod'
+      resourceGroupName: '${{ github.event.inputs.RESOURCE_GROUP }}-PROD'
+      databricksWorkspaceName: '${{ github.event.inputs.WORKSPACE_NAME }}-PROD'
+      keyVaultName: '${{ github.event.inputs.KEY_VAULT_NAME }}-PROD'
 
     steps:
     # Show the environment variables for debugging
